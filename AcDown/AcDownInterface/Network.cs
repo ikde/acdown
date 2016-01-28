@@ -477,10 +477,12 @@ namespace Kaedei.AcDown.Interface
 		public static string GetHtmlSource(string url, System.Text.Encoding encode, WebProxy proxy)
 		{
 			HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
-			//if (proxy == null)
-			//    req.Proxy = new WebProxy();
-			//else
-			req.Proxy = proxy;
+            //if (proxy == null)
+            //    req.Proxy = new WebProxy();
+            //else
+            req.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36";
+            req.AllowAutoRedirect = true;
+            req.Proxy = proxy;
 			return GetHtmlSource(req, encode);
 		}
 	}

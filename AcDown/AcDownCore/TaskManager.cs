@@ -340,6 +340,8 @@ namespace Kaedei.AcDown.Core
 			int count = 0;
 			foreach (var i in this.TaskInfos)
 			{
+                if (i == null)
+                    continue;
 				if (i.Status == DownloadStatus.正在下载)
 					count++;
 			}
@@ -577,7 +579,7 @@ namespace Kaedei.AcDown.Core
 		/// <summary>
 		/// NewTask委托的预处理
 		/// </summary>
-		private void NewTaskPreprocessor(object e)
+		public void NewTaskPreprocessor(object e)
 		{
 			ParaNewTask p = (ParaNewTask)e;
 			TaskInfo sourcetask = p.SourceTask;

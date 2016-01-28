@@ -32,6 +32,8 @@ namespace Kaedei.AcDown.Downloader
 
 		public bool CheckUrl(string url)
 		{
+            return true;
+/*
 			if (urls == null)
 				urls = supportedurl.Split('|');
 			foreach (string item in urls)
@@ -55,6 +57,7 @@ namespace Kaedei.AcDown.Downloader
 			//华数TV
 			if (Regex.IsMatch(url, @"http://www.wasu.cn/Play/show/id/\d+")) return true;
 			return false;
+*/
 		}
 
 		/// <summary>

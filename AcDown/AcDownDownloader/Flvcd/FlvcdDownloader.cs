@@ -20,13 +20,13 @@ namespace Kaedei.AcDown.Downloader
 
 			//原始Url
 			Info.Url = Info.Url.TrimStart('+');
-			//修正url
-			string url = "http://www.flvcd.com/parse.php?kw=" + Tools.UrlEncode(Info.Url);
+            //修正url
+            string url = "http://www.flvcd.com/parse.php?format=&kw=" + Tools.UrlEncode(Info.Url);
 
-			try
+            try
 			{
 				//取得网页源文件
-				string src = Network.GetHtmlSource(url, Encoding.GetEncoding("GB2312"), Info.Proxy);
+				string src = Network.GetHtmlSource(url, Encoding.GetEncoding("UTF-8"), Info.Proxy);
 
 				//检查是否需要密码
 				if (src.Contains("请输入密码"))
