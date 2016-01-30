@@ -6,20 +6,20 @@ using System.Text.RegularExpressions;
 
 namespace Kaedei.AcDown.Downloader
 {
-	[AcDownPluginInformation("JiyingDmDownloader", "極影動漫網下载插件", "", "1.1.0.1", "JiyingDmJiyingDm下载插件", "")]
-	public class JiyingDmPlugin : IPlugin
+	[AcDownPluginInformation("Dm530Downloader", "風車動漫網下载插件", "", "1.1.0.1", "Dm530下载插件", "")]
+	public class Dm530Plugin : IPlugin
 	{
-    	public static string RegexPatternWeb = @"www.jiyingdm.com/.+";
+    	public static string RegexPatternWeb = @"www.dm530.com/.+";
 
-		public JiyingDmPlugin()
+		public Dm530Plugin()
 		{
 			Feature = new Dictionary<string, object>();
 			//ExampleUrl
 			Feature.Add("ExampleUrl", new string[] { 
-				"JiyingDmJiyingDm下载插件:",
+				"Dm530Dm530下载插件:",
 				"支持简写形式",
 				"",
-				"http://www.jiyingdm.com"
+				"http://www.dm530.com"
 			});
 			//AutoAnswer(不支持)
 			//ConfigurationForm(不支持)
@@ -27,7 +27,7 @@ namespace Kaedei.AcDown.Downloader
 
 		public IDownloader CreateDownloader()
 		{
-			return new JiyingDmDownloader();
+			return new Dm530Downloader();
 		}
 
 		public bool CheckUrl(string url)
@@ -47,7 +47,7 @@ namespace Kaedei.AcDown.Downloader
 		{
             if (CheckUrl(url))
             {
-                return "jiyingdm" + Guid.NewGuid().ToString();
+                return "dm530" + Guid.NewGuid().ToString();
             }
             else
             {

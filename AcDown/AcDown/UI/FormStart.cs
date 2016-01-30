@@ -79,8 +79,9 @@ namespace Kaedei.AcDown.UI
 					new TucaoPlugin(),
 					new XiamiPlugin(),
 					new GoodmangaPlugin(),
-					new FlvcdPlugin(),
                     new JiyingDmPlugin(),
+                    new Dm530Plugin(),
+                    new FlvcdPlugin(),
 					//new AcDown.Downloader.AcDown.AcDownPlugin()
 				};
 
